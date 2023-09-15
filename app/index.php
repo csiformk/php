@@ -67,10 +67,10 @@ lignes
 ?>
 
 <!-- <h2><?php echo $titre ?></h2>
-<h2><?= $titre ?></h2>
+<h2><?//= $titre ?></h2>
 
 <p>
-    <?= $texte ?>;
+    <?//= $texte ?>;
 </p> -->
 
 <?php
@@ -100,10 +100,10 @@ lignes
 
 // $tableau = ['groupe scolaire', 34 , 5.78 , false , [1,2,3]];
 
-$client = 'Jane Done';
-$formation = 'Architecte';
+// $client = 'Jane Done';
+// $formation = 'Architecte';
 
-echo '$client suit une formation de $formation';
+// echo '$client suit une formation de $formation';
 
 //echo "test";
 
@@ -129,3 +129,59 @@ echo '$client suit une formation de $formation';
 // echo '<pre>';
 // var_dump($_SERVER);
 // echo '</pre>';
+
+// Operateur
+
+$x = 4;
+$y = 2;
+$z = 5;
+
+/*
++
+-
+*
+/
+**
+%
+*/
+
+// $calcul = $x + $y;
+// $calcul = $x - $y;
+// $calcul = $x * $y;
+// $calcul = $x / $y;
+// $calcul = $x ** $y;
+// $calcul = $x % $y;
+// $calcul = ($x + $z) * $y;
+
+// echo $calcul;
+
+// $a = 5;
+// $b = 7;
+
+// $a += 6; // $a = $a + 6;
+// $a -= 6; // $a = $a - 6;
+// $a *= 6; // $a = $a * 6;
+// $a /= 6; // $a = $a / 6;
+// $a **= 6; // $a = $a ** 6;
+// $a %= 6; // $a = $a % 6;
+
+// echo $a;
+
+// Creer 2 variables prixht et tva
+// Afficher le calcul du prix ttc
+// Affichage du prix ttc : Le prix TTC est de xxx €
+
+// $prixht = 34;
+// $tva = 10;
+
+// // $prixttc = $prixht + ($tva * $prixht) /100;
+// $prixht += ($tva * $prixht) /100;
+
+// echo "Le prix TTC est de $prixht €.";
+
+// Calculer l'âge d'une personne en fonction de son année de naissance
+// En utilisant la fonction date
+$anneeDeNaissance = 1990;
+$anneeEnCours = date("Y");
+$age = $anneeEnCours - $anneeDeNaissance;
+echo "$age";
