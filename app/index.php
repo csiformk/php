@@ -98,7 +98,12 @@ lignes
 
 // echo $html;
 
-$tableau = ['groupe scolaire', 34 , 5.78 , false , [1,2,3]];
+// $tableau = ['groupe scolaire', 34 , 5.78 , false , [1,2,3]];
+
+$client = 'Jane Done';
+$formation = 'Architecte';
+
+echo '$client suit une formation de $formation';
 
 //echo "test";
 
@@ -121,6 +126,6 @@ $tableau = ['groupe scolaire', 34 , 5.78 , false , [1,2,3]];
 // Varialbes superglobales
 
 // var_dump($GLOBALS);
-echo '<pre>';
-var_dump($_SERVER);
-echo '</pre>';
+// echo '<pre>';
+// var_dump($_SERVER);
+// echo '</pre>';
