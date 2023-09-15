@@ -181,7 +181,11 @@ $z = 5;
 
 // Calculer l'âge d'une personne en fonction de son année de naissance
 // En utilisant la fonction date
-$anneeDeNaissance = 1990;
-$anneeEnCours = date("Y");
-$age = $anneeEnCours - $anneeDeNaissance;
-echo "$age";
+// $anneeDeNaissance = 1990;
+// $anneeEnCours = date("Y");
+// $age = $anneeEnCours - $anneeDeNaissance;
+// echo "$age";
+
+$i = 10;
+$i++; // $i = $i + 1 | $i += 1
+$i--; // $i = $i - 1 | $i -= 1
