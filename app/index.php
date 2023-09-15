@@ -83,4 +83,4 @@ $data4 = "les terriens";
 // Afficher la phrase suivante dans un paragraphe
 // Hello, les terriens.Je viens de la planete Mars.
 
-echo $data1 . ", " . $data4 . ".Je viens de la " . $data2 . " " . $data3 . ".";
+echo "$data1, $data4. Je viens de la $data2 $data3.";
