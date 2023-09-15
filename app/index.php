@@ -75,12 +75,52 @@ lignes
 
 <?php
 
-$data1 = "Hello";
-$data2 = "planete";
-$data3 = "Mars";
-$data4 = "les terriens";
+// $data1 = "Hello";
+// $data2 = "planete";
+// $data3 = "Mars";
+// $data4 = "les terriens";
 
 // Afficher la phrase suivante dans un paragraphe
 // Hello, les terriens.Je viens de la planete Mars.
 
-echo $data1 . ", " . $data4 . ".Je viens de la " . $data2 . " " . $data3 . ".";
+// echo "<p>$data1" . ", " . $data4 . ".Je viens de la " . $data2 . " " . $data3 . ".</p>";
+
+// $html = '';
+// $html .= '<p>';
+// $html .= $data1;
+// $html .= ", ";
+// $html .= $data4;
+// $html .= ".Je viens de la ";
+// $html .= $data2;
+// $html .= " ";
+// $html .= $data3;
+// $html .= '</p>';
+
+// echo $html;
+
+$tableau = ['groupe scolaire', 34 , 5.78 , false , [1,2,3]];
+
+//echo "test";
+
+//die();
+
+// echo "<pre>";
+// print_r($tableau);
+// var_dump($tableau);
+// echo "</pre>";
+
+// Constantes
+
+// define('USER', 'Jon Doe');
+// echo USER;
+
+// define('TABLEAU', ['client', 4, true, 4.8]);
+
+// var_dump(TABLEAU);
+
+// Varialbes superglobales
+
+// var_dump($GLOBALS);
+echo '<pre>';
+var_dump($_SERVER);
+echo '</pre>';
