@@ -79,10 +79,89 @@ $fruits2 = explode('-',$chaine);
 
 // var_dump($fruits2);
 
-$planetes = ['mars','terre','uranus','venus','jupiter'];
+// $planetes = ['mars','terre','uranus','venus','jupiter'];
+$planetes = [
+    'm' => 'mars',
+    't' => 'terre',
+    'u' => 'uranus',
+    'v' => 'venus',
+    'j' => 'jupiter'
+];
 
-print_r($planetes);
+// print_r($planetes);
 
-sort($planetes);
+// sort($planetes);
+// asort($planetes);
+// rsort($planetes);
+// ksort($planetes);
+// arsort($planetes);
+// krsort($planetes);
 
-print_r($planetes);
+// print_r($planetes);
+
+$tab = [];
+$tab[] = ['A','B','C'];
+$tab[] = ['Q','R','T'];
+$tab[] = ['E','U','P','I'];
+
+// print_r($tab);
+
+// Afficher le mot CEPPIC avec les lettres du tableau $tab
+
+// print_r($tab[0][2].$tab[2][0].$tab[2][2].$tab[2][2].$tab[2][3].$tab[0][2]);
+
+$person1 = [
+    'nom' => 'Carle',
+    'prenom' => 'Awa',
+    'email' => 'cawa@yahoo.com'
+];
+
+$people = [
+    $person1,
+    [
+        'nom' => 'Mourad',
+        'prenom' => 'Michel',
+        'email' => 'moumi@caramail.com'
+    ],
+    [
+        'nom' => 'Dupond',
+        'prenom' => 'Lucie',
+        'email' => 'ludu@gmail.com'
+    ]
+];
+
+// print_r($people);
+
+// Afiicher les phrase suivantes :
+// Le nom de Lucie est Dupond.
+// L'email de Mourad est mouni@caramail.com
+
+// print_r('Le nom de ' . $people[2]['prenom'] . ' est ' . $people[2]['nom'] . '.');
+
+// print_r("L'email de " . $people[1]['nom'] . ' est ' . $people[1]['email'] . '.');
+
+$jsonFile = json_encode($people);
+
+// print_r($jsonFile);
+
+$jsonPerson = '{
+    "nom" : "Pont",
+    "prenom" : "Albert",
+    "email" : "ponal@yahoo.fr",
+    "couleur" : ["rouge","vert","jaune"],
+    "image" : "http://ximg.es/128x128/000/fff"
+}';
+
+$jsonPersonArray = json_decode($jsonPerson,true);
+
+// print_r($jsonPersonArray);
+?>
+<figure>
+    <img src="<?=$jsonPersonArray['image']?>">
+    <figcaption>
+    <ul>
+        <li><?=$jsonPersonArray['prenom']?> <?=$jsonPersonArray['nom']?></li>
+        <li><?=$jsonPersonArray['email']?></li>
+    </ul>
+    </figcaption>
+</figure>
