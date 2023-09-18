@@ -186,6 +186,6 @@ $z = 5;
 // $age = $anneeEnCours - $anneeDeNaissance;
 // echo "$age";
 
-$i = 10;
-$i++; // $i = $i + 1 | $i += 1
-$i--; // $i = $i - 1 | $i -= 1
+// $i = 10;
+// $i++; // $i = $i + 1 | $i += 1
+// $i--; // $i = $i - 1 | $i -= 1
