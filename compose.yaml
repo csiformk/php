@@ -5,6 +5,6 @@ services:
     image: docker.io/php:8.2-apache
     restart: always
     volumes:
-      - "./app/inclusion/:/var/www/html/"
+      - "./app/:/var/www/html/"
     ports:
       - "8003:80"
