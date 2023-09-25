@@ -95,6 +95,6 @@ function dd($value) {
 // echo calcul(5);
 // dd($y);
 
-global $z;
-$z = 'Le monde';
-echo "Hello " . $GLOBALS['z'];
+// global $z;
+// $z = 'Le monde';
+// echo "Hello " . $GLOBALS['z'];
