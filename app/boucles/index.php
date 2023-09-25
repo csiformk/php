@@ -41,10 +41,20 @@ $user = [
 ];
 
 foreach($user as $key => $value):
-    echo "$key : $value";
-    // test si value est un tableau (is_array)
-    // si oui transformer le tableau en chaine de cacatere (implode)
-    // afficher cette chaine de cacatere sous de tableau (json_encode)
-endforeach;
+    echo "$key : ";
+    // if (is_array($value)){
+    //     foreach($value as $skill):
+    //         echo "$skill<br>";
+    //     endforeach;
+    // } else {
+    //     echo $value;
+    // }
+    // echo '<br>';
+    
+    if (is_array($value)){
+    $value = implode(",",$value);
+    echo json_decode($value);
+    } 
+    echo "$value<br>";
 
-// Afficher le tableau des skills
+endforeach;
