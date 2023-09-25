@@ -1,3 +1,8 @@
 <?php
+require '../fonctions/index.php';
 
-echo "boucles";
+$planetes = ['mars','uranus','jupiter','terre','saturne'];
+
+dd($planetes);
+
+echo "test";
