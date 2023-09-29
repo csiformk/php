@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS post (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nom VARCHAR(255),
+    email VARCHAR(255),
+    titre VARCHAR(500),
+    commentaire TEXT,
+    competence VARCHAR(255),
+    niveau VARCHAR(255),
+    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
