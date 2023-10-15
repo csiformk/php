@@ -42,6 +42,14 @@
                     <input type="radio" name="niveau" id="expert" value="expert">Expert
                 </div>
                 <div>
+                    <select name="couleur">
+        <option value="">Choisir une couleur
+        <option value="rouge">Rouge
+<option value="bleu">Bleu
+<option value="vert">Vert
+</select>
+                </div>
+                <div>
                     <input type="submit" value="Envoyer">
                 </div>
             </form>

@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"):
    
     $val = is_array($val) ? implode(',',$val) : $val;
     ?>
-    <li><?=$key;?> : <?=$val;?></li>
+    <li><strong><?=$key;?></strong> : <?=$val;?></li>
 <?php endforeach; ?>
 </ul>
 
