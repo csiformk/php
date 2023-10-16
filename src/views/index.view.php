@@ -8,7 +8,7 @@
 <body>
 <ul>
     <?php foreach($articles as $article): ?>
-        <li><?=$article['titre']?></li>
+        <li><a href="show.php?id=<?=$article['id']?>"><?=$article['titre']?></a></li>
     <?php endforeach;?>
 </ul>
 </body>
