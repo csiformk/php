@@ -1,55 +1,47 @@
-<?php phpinfo(); ?>
+<?php
+include './fonctions.php';
+
+// class Person {
+//     //attributs (variables)
+//     public $nom;
+//     public $age;
+
+//     //methodes (fonctions)
+//     public function courir() {
+//         echo $this->nom . ' court lentement !';
+//     }
+// }
+
+// $person1 = new Person();
+// $person1->nom = 'Jon doe';
+// $person1->age = 30;
+// $person1->courir();
+
+//https://www.php.net/manual/en/pdo.connections.php
+
+try {
+    $connexion = new PDO('mysql:host=mariadb;dbname=blog', 'root', 'root');
+} catch (PDOException $e) {
+    exit('Erreur de connexion à labase de donnée :' . $e);
+}
+
+$articles = $connexion->query('SELECT * from post')->fetchAll(PDO::FETCH_ASSOC);
+?>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
 </head>
-
 <body>
-    <main>
-        <section>
-            <h1>Formulaire</h1>
-            <form action="./traitement.php" method="POST">
-                <div>
-                    <label for="nom">Nom :</label>
-                    <input type="text" name="nom" id="nom">
-                </div>
-                <div>
-                    <label for="email">Email :</label>
-                    <input type="email" name="email" id="email">
-                </div>
-                <div>
-                    <label for="titre">Titre :</label>
-                    <input type="text" name="titre" id="titre">
-                </div>
-                <div>
-                    <label for="commentaire">Commentaire :</label>
-                    <textarea name="commentaire" id="commentaire" cols="30" rows="10"></textarea>
-                </div>
-                <div>
-                    <label for="competence">Compétence :</label>
-                    <input type="checkbox" name="competance[]" value="php" id="php">PHP
-                    <input type="checkbox" name="competance[]" value="python" id="python">PYTHON
-                    <input type="checkbox" name="competance[]" value="html" id="html">HTML
-                </div>
-                <div>
-                    <label for="niveau">Niveau : </label>
-                    <input type="radio" name="niveau" id="debutant" value="debutant">Débutant
-                    <input type="radio" name="niveau" id="intermediaire" value="intermediaire">Intermediaire
-                    <input type="radio" name="niveau" id="expert" value="expert">Expert
-                </div>
-                <div>
-                    <input type="submit" value="Envoyer">
-                </div>
-            </form>
-
-        </section>
-    </main>
+<ul>
+    <?php foreach($articles as $article): ?>
+        <li><?=$article['titre']?></li>
+    <?php endforeach;?>
+</ul>
 </body>
-
 </html>
+
+<?php $connexion = null; ?>
