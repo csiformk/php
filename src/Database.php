@@ -18,10 +18,10 @@ class Database
         }
     }
 
-    public function query($query)
+    public function query($query, $param = [])
     {
         $statement = $this->connexion->prepare($query);
-        $statement->execute();
+        $statement->execute($param);
         return $statement;
     }
 }
