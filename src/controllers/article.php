@@ -10,7 +10,7 @@ $queryArticle = 'SELECT * FROM post where id = :id';
 $article = $db->query($queryArticle, [':id' => $id])->find();
 
 if (! $article) {
-    exit("Article n'existe pas !");
+   abort();
 }
 
 include 'views/article.view.php';
