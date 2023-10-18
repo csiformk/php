@@ -1,15 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Articles</title>
-</head>
-<body>
-<ul>
-    <?php foreach($articles as $article): ?>
-        <li><a href="show.php?id=<?=$article['id']?>"><?=$article['titre']?></a></li>
-    <?php endforeach;?>
-</ul>
-</body>
-</html>
+<?php
+include 'partials/header.php';
+?>
+
+<main>
+    <h2><?= $heading ?></h2>
+
+    <section>
+        <ul>
+            <?php foreach ($articles as $article) : ?>
+                <li><a href="show.php?id=<?= $article['id'] ?>"><?= $article['titre'] ?></a></li>
+            <?php endforeach; ?>
+        </ul>
+    </section>
+
+</main>
+
+
+<?php
+include 'partials/footer.php';
+?>

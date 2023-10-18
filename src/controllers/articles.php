@@ -1,8 +1,9 @@
 <?php
-include './fonctions.php';
-require './Database.php';
+require 'Database.php';
 
 $db = new Database();
 $articles = $db->query('SELECT * FROM post')->fetchAll();
 
-include './views/articles.view.php';
+$heading = 'Liste des recettes';
+
+include 'views/articles.view.php';
