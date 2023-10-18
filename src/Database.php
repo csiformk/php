@@ -4,6 +4,7 @@
 class Database
 {
     public $connexion;
+    public $statement;
 
     public function __construct()
     {
@@ -20,9 +21,19 @@ class Database
 
     public function query($query, $param = [])
     {
-        $statement = $this->connexion->prepare($query);
-        $statement->execute($param);
-        return $statement;
+        $this->statement = $this->connexion->prepare($query);
+        $this->statement->execute($param);
+        return $this;
+    }
+
+    public function find() 
+    {
+        return $this->statement->fetch();
+    }
+
+    public function findAll() 
+    {
+        return $this->statement->fetchAll();
     }
 }
 

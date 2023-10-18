@@ -7,7 +7,7 @@ $id = $_GET['id'];
 
 $queryArticle = 'SELECT * FROM post where id = :id';
 
-$article = $db->query($queryArticle, [':id' => $id])->fetch();
+$article = $db->query($queryArticle, [':id' => $id])->find();
 
 if (! $article) {
     exit("Article n'existe pas !");
