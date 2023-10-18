@@ -17,7 +17,6 @@ function abort($code=404)
     die();
 }
 
-// require 'routes.php';
 $routes = require('routes.php');
 
 routeToController($uriPath, $routes);
