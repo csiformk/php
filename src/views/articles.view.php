@@ -8,7 +8,7 @@ include 'partials/header.php';
     <section>
         <ul>
             <?php foreach ($articles as $article) : ?>
-                <li><a href="show.php?id=<?= $article['id'] ?>"><?= $article['titre'] ?></a></li>
+                <li><a href="/article?id=<?= $article['id'] ?>"><?= $article['titre'] ?></a></li>
             <?php endforeach; ?>
         </ul>
     </section>
