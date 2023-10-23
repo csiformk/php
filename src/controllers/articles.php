@@ -6,4 +6,7 @@ $articles = $db->query('SELECT * FROM post')->findAll();
 
 $heading = 'Liste des recettes';
 
-include 'views/articles.view.php';
+view('articles',[
+    'heading' => $heading,
+    'articles' => $articles
+]);

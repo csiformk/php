@@ -13,4 +13,6 @@ if (! $article) {
    abort();
 }
 
-include 'views/article.view.php';
+view('article',[
+   'article' => $article
+]);

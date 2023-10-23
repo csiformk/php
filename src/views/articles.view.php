@@ -1,10 +1,7 @@
-<?php include 'partials/header.php'; ?>
-
-<main>
-    <h2><?= $heading ?></h2>
+    <h2><?= $model['heading'] ?></h2>
     <section>
         <ul>
-            <?php foreach ($articles as $article) : ?>
+            <?php foreach ($model['articles'] as $article) : ?>
                 <li>
                     <a href="/article?id=<?= $article['id'] ?>">
                         <?= $article['titre'] ?>
@@ -13,7 +10,3 @@
             <?php endforeach; ?>
         </ul>
     </section>
-</main>
-
-
-<?php include 'partials/footer.php'; ?>
