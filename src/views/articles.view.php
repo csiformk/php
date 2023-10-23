@@ -9,4 +9,5 @@
                 </li>
             <?php endforeach; ?>
         </ul>
+        <p><a href="/article-new">Ajouter une nouvelle recette</a></p>
     </section>
