@@ -8,3 +8,7 @@
     <title>Nos recettes</title>
 </head>
 <body>
+<header>
+        <h1>Recette</h1>
+        <?php include 'nav.php'; ?>
+</header>

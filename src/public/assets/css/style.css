@@ -18,3 +18,15 @@ ul {
     font-weight: bold;
     padding: 1rem;
 }
+
+.btn-supp {
+  padding: 0 0.5rem;
+  background-color: red;
+  color: white;
+  border-radius: 10%;
+  font-weight: bold;
+}
+
+.ml1 {
+    margin-left: 1rem;
+}
