@@ -11,3 +11,10 @@ header ul {
 ul {
     list-style-type: none;
 }
+
+.error {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    padding: 1rem;
+}
