@@ -27,6 +27,14 @@ ul {
   font-weight: bold;
 }
 
+.btn-mod {
+    padding: 0 0.5rem;
+    background-color: green;
+    color: white;
+    border-radius: 10%;
+    font-weight: bold;
+  }
+
 .ml1 {
     margin-left: 1rem;
 }
