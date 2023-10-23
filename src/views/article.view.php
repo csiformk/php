@@ -11,7 +11,7 @@ Modifier cet article
 </p>
 
 <p>
-    <a href="/article-delete?id=<?=$model['article']['id']?> onClick="return confirm('Etes-vous certain de supprimer cet article !?');" class="btn-supp">
+    <a href="/article-delete?id=<?=$model['article']['id']?>" onClick="return confirm('Etes-vous certain de supprimer cet article !?');" class="btn-supp">
     Supprimer cet article
 </a>
 </p>
