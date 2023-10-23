@@ -2,4 +2,4 @@
 
 $heading = 'Mentions Légales';
 
-include 'views/mentions.view.php';
+view('mentions',$heading);

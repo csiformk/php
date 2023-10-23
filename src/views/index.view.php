@@ -1,7 +1,2 @@
-<?php include 'partials/header.php'; ?>
-
-<main>
-    <h2><?= $heading ?></h2>
-</main>
-
-<?php include 'partials/footer.php'; ?>
+<h2><?= $model ?></h2>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam repellat veritatis optio animi accusantium perferendis cumque voluptate esse temporibus, vero velit voluptates! Totam ducimus illum minus, aut iure nulla odit!</p>
