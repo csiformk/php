@@ -43,7 +43,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'):
 
 
     if ( empty($errors) ) :
-        $db->query('INSERT INTO post (titre, contenu) VALUES (:titre, :contenu)' , [
+        $db->query('UPDATE post SET titre = :titre , contenu = :contenu WHERE id = :id' , [
+            'id' => $id,
             'titre' => $titre,
             'contenu' => $contenu
         ]
