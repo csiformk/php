@@ -1,11 +1,7 @@
-<?php
-include 'partials/header.php';
-?>
+<?php include 'partials/header.php'; ?>
 
 <main>
-<h2><?=$heading?></h2>
+    <h2><?= $heading ?></h2>
 </main>
 
-<?php
-include 'partials/footer.php';
-?>
+<?php include 'partials/footer.php'; ?>

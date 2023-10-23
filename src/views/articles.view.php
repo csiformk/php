@@ -1,10 +1,7 @@
-<?php
-include 'partials/header.php';
-?>
+<?php include 'partials/header.php'; ?>
 
 <main>
     <h2><?= $heading ?></h2>
-
     <section>
         <ul>
             <?php foreach ($articles as $article) : ?>
@@ -16,10 +13,7 @@ include 'partials/header.php';
             <?php endforeach; ?>
         </ul>
     </section>
-
 </main>
 
 
-<?php
-include 'partials/footer.php';
-?>
+<?php include 'partials/footer.php'; ?>

@@ -1,6 +1,4 @@
-<?php
-include 'partials/header.php';
-?>
+<?php include 'partials/header.php'; ?>
 
 <main>
     <h3><?= $article['titre'] ?></h3>
@@ -9,6 +7,4 @@ include 'partials/header.php';
     <p><a href="/articles">Retour à la liste des articles</a></p>
 </main>
 
-<?php
-include 'partials/footer.php';
-?>
+<?php include 'partials/footer.php'; ?>

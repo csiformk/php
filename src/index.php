@@ -1,3 +1,3 @@
 <?php
-include 'fonctions.php';
-include 'router.php';
+include 'config/fonctions.php';
+include 'core/router.php';
