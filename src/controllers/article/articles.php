@@ -2,7 +2,7 @@
 require 'models/Database.php';
 
 $db = new Database();
-$articles = $db->query('SELECT * FROM post ORDER BY id DESC')->findAll();
+$articles = $db->getAllArticles();
 
 $heading = 'Liste des recettes';
 

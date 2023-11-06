@@ -13,9 +13,9 @@ $queryArticle = 'SELECT * FROM post where id = :id';
 
 $article = $db->query($queryArticle, [':id' => $id])->find();
 
-if (! $article) {
+/* if (! $article) {
    abort();
-}
+} */
 
 view('article/article',[
    'article' => $article

@@ -35,5 +35,21 @@ class Database
     {
         return $this->statement->fetchAll();
     }
+
+    public function getAllUsers() 
+    {
+        return $this->query('SELECT * FROM user')->findAll();
+    }
+
+    public function getAllArticles() 
+    {
+        return $this->query('SELECT * 
+        FROM post p
+        INNER JOIN user u 
+        ON p.user_id = u.id
+        ORDER BY p.user_id DESC')->findAll();
+    }
+
+
 }
 
