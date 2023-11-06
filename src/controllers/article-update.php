@@ -42,7 +42,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'):
 
 
     if ( empty($errors) ) :
-        $db->query('UPDATE post SET titre = :titre , contenu = :contenu WHERE id = :id' , [
+        $queryUpdate = 'UPDATE post SET titre = :titre , contenu = :contenu WHERE id = :id';
+        
+        $db->query($queryUpdate , [
             'id' => $id,
             'titre' => $titre,
             'contenu' => $contenu
