@@ -2,7 +2,9 @@
 require 'Test.php';
 //require 'Model.php';
 
-//$obj = new Test();
+
+$obj = new Test();
+
 //echo $obj->var1;
 //echo $obj->var2;
 // echo $obj->var3;
@@ -11,6 +13,7 @@ require 'Test.php';
 //echo $obj->displayVar();
 //echo $obj->displayVar('test');
 
+<<<<<<< HEAD
 //echo $obj::PI;
 //echo Test::PI;
 
@@ -34,3 +37,4 @@ require 'Test.php';
 
 $obj3 = new AbstractClassHerite();
 $obj3->appelUneMethode();
+
