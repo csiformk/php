@@ -1,20 +1,7 @@
 <?php
 require 'models/Database.php';
 $db = new Database;
-$heading = 'Modifcation recette';
-
-$id = filter_var($_GET['id'], FILTER_SANITIZE_NUMBER_INT);
-
-if (!is_numeric($id)) {
-    abort();
- }
- 
- $queryArticle = 'SELECT * FROM post where id = :id';
- $articleUpdate = $db->query($queryArticle, [':id' => $id])->find();
- 
- if (! $articleUpdate) {
-    abort();
- }
+$heading = 'Nouvelle recette';
 
 $titre = $contenu = $errors = '';
 
@@ -23,6 +10,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'):
 
     $titre = cleanData($_POST['titre']);
     $contenu = cleanData($_POST['contenu']);
+
+   /*  if ( strlen($titre) === 0 || strlen($contenu) === 0 ) :
+        $errors[] = 'Champ titre ou contenu vide !!!' ;
+    endif; */
 
     if ( strlen($titre) === 0 ) :
         $errors[] = 'Champ titre vide !!!' ;
@@ -42,10 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'):
 
 
     if ( empty($errors) ) :
-        $queryUpdate = 'UPDATE post SET titre = :titre , contenu = :contenu WHERE id = :id';
-        
-        $db->query($queryUpdate , [
-            'id' => $id,
+        $db->query('INSERT INTO post (titre, contenu) VALUES (:titre, :contenu)' , [
             'titre' => $titre,
             'contenu' => $contenu
         ]
@@ -56,9 +44,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'):
     
 endif;
 
-view('article-update',[
+view('article/article-new',[
     'heading' => $heading,
-    'titre' => $articleUpdate['titre'],
-    'contenu' => $articleUpdate['contenu'],
+    'titre' => $titre,
+    'contenu' => $contenu,
     'errors' => $errors
 ]);

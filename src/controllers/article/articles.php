@@ -6,7 +6,7 @@ $articles = $db->query('SELECT * FROM post ORDER BY id DESC')->findAll();
 
 $heading = 'Liste des recettes';
 
-view('articles',[
+view('article/articles',[
     'heading' => $heading,
     'articles' => $articles
 ]);

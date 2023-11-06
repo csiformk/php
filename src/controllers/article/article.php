@@ -17,6 +17,6 @@ if (! $article) {
    abort();
 }
 
-view('article',[
+view('article/article',[
    'article' => $article
 ]);
