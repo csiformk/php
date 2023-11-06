@@ -1,2 +1,0 @@
-<h2><?= $model ?></h2>
-<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam repellat veritatis optio animi accusantium perferendis cumque voluptate esse temporibus, vero velit voluptates! Totam ducimus illum minus, aut iure nulla odit!</p>
