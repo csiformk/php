@@ -8,11 +8,8 @@
     <?php endif; ?>
     >
     <label for="contenu">Recette :</label>
-    <textarea name="contenu" id="contenu" cols="30" rows="10">
-    <?php if ( isset( $model['contenu'] ) ) : ?>
-        <?=$model['contenu']?>
-    <?php endif; ?>
-    </textarea>
+    <textarea name="contenu" id="contenu" cols="30" rows="10"><?=( isset( $model['contenu'] ) ) ? $model['contenu'] : '' ?></textarea>
+
     <input type="submit" value="Modifier">
     </form>
         <?php

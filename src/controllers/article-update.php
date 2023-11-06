@@ -10,7 +10,6 @@ if (!is_numeric($id)) {
  }
  
  $queryArticle = 'SELECT * FROM post where id = :id';
- 
  $articleUpdate = $db->query($queryArticle, [':id' => $id])->find();
  
  if (! $articleUpdate) {
