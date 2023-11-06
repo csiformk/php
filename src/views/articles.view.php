@@ -3,9 +3,9 @@
         <ul>
             <?php foreach ($model['articles'] as $article) : ?>
                 <li>
-                <?= $article['id'] ?> - <a href="/article?id=<?= $article['id'] ?>">
+                > <a href="/article?id=<?= $article['id'] ?>">
                         <?= $article['titre'] ?>
-                    </a> <a href="/article-delete?id=<?=$article['id']?>" onClick="return confirm('Etes-vous certain de supprimer cet article !?');" class="btn-supp ml1">X</a>
+                    </a>
                 </li>
             <?php endforeach; ?>
         </ul>
