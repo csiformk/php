@@ -1,40 +1,20 @@
 <?php
-require 'Test.php';
-//require 'Model.php';
+session_start();
+
+$_SESSION['favcolor'] = 'red';
 
 
-$obj = new Test();
+?>
 
-//echo $obj->var1;
-//echo $obj->var2;
-// echo $obj->var3;
+<a href="session.php">Page lecture session</a>
 
-//$obj->displayVar();
-//echo $obj->displayVar();
-//echo $obj->displayVar('test');
+<a href="kill_session.php">Suppression des sessions</a>
 
-<<<<<<< HEAD
-//echo $obj::PI;
-//echo Test::PI;
+<?php
 
-//echo $obj->calculAire();
+// Cookie
+/* $value = 'ceppic';
 
-//$obj->rayon = '12';
+setcookie("TestCookie", $value, time()+3600);
 
-//echo $obj->calculAire() . ' cm2';
-
-//echo Test::$var4;
-
-//echo Test::stacticFunc();
-
-//$objHerite = new TestHerite();
-
-//echo $objHerite->getVar();
-
-//$users = new Model();
-
-//var_dump($users);
-
-$obj3 = new AbstractClassHerite();
-$obj3->appelUneMethode();
-
+echo $_COOKIE['TestCookie']; */
