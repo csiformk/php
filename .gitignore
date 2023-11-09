@@ -76,3 +76,6 @@ $RECYCLE.BIN/
 
 # End of OSs
 
+composer.phar
+/vendor/
+
